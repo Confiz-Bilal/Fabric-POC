@@ -8,12 +8,12 @@
 # META   },
 # META   "dependencies": {
 # META     "lakehouse": {
-# META       "default_lakehouse": "5140e695-a8ff-40ac-a183-c2a643970467",
-# META       "default_lakehouse_name": "poc_lakehouse",
-# META       "default_lakehouse_workspace_id": "0dec1b85-1750-4636-9b5a-7a51186126c7",
+# META       "default_lakehouse": "b15d12ca-9efc-4685-9139-dda89bd3fb6d",
+# META       "default_lakehouse_name": "brz_lakehouse",
+# META       "default_lakehouse_workspace_id": "0690c66c-0e84-43af-a08c-0ad7e0e10f7c",
 # META       "known_lakehouses": [
 # META         {
-# META           "id": "5140e695-a8ff-40ac-a183-c2a643970467"
+# META           "id": "b15d12ca-9efc-4685-9139-dda89bd3fb6d"
 # META         }
 # META       ]
 # META     }
@@ -46,6 +46,18 @@
 
 # META {
 # META   "language": "sparksql",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+df = spark.sql("SELECT * FROM fact_call_center_agent_evaluation LIMIT 1000")
+display(df)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
 # META   "language_group": "synapse_pyspark"
 # META }
 
